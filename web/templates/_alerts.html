@@ -1,0 +1,36 @@
+<link href="/static//assets/plugins/toastr/toastr.min.css" rel="stylesheet" type="text/css">
+<script src="/static/assets/plugins/toastr/toastr.min.js"></script>
+<script>
+
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": true,
+        "positionClass": "toast-bottom-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    };
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.tags and message.tags == 'success' %}
+                //toastr.success('{{ message }}');
+            {% elif message.tags and message.tags == 'warning' %}
+                toastr.warning('{{ message }}');
+            {% elif message.tags and message.tags == 'error' %}
+                toastr.error('{{ message }}');
+            {% else %}
+                toastr.info('{{ message }}');
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    window.toastr = toastr;
+</script>

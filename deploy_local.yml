@@ -1,0 +1,47 @@
+version: '3.1'
+services:
+  # Postgres DB
+# Postgres DB
+  db:
+    image: postgres
+    env_file: .env
+    container_name: ${PROJ_NAME}_db
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTGRES_DB=${DB_NAME}
+    ports:
+      - ${DB_PORT}:${DB_PORT}
+    volumes:
+      - web-db:/var/lib/postgresql/data
+
+  backend:
+    build: .
+    container_name: ${PROJ_NAME}_backend
+    command: bash -c "sleep 5 && sh /usr/src/app/init_local.sh"
+    env_file: .env
+    environment:
+      - ENVIRONMENT=local
+      - DJANGO_DEBUG=True
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "8000:8000"
+    links:
+      - db
+      #- frontend
+    depends_on:
+      - db
+      #- frontend
+
+  frontend:
+    build: ./frontend
+    container_name: ${PROJ_NAME}_frontend
+    command: bash -c "npm run --prefix ./frontend start"
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "3000:3000"
+
+volumes:
+  web-db:

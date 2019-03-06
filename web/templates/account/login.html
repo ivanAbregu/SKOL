@@ -1,0 +1,55 @@
+{% extends "base_image.html" %}
+
+{% load i18n bootstrap3 %}
+{% load account socialaccount bootstrap3 %}
+
+{% block head_title %}Iniciar Sesión - skol{% endblock %}
+
+{% block content %}
+
+
+    {% get_providers as socialaccount_providers %}
+
+    {% if socialaccount_providers %}
+        <p>{% blocktrans with site.name as site_name %}Please sign in with one
+            of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+            for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+
+        <div class="socialaccount_ballot">
+
+            <ul class="socialaccount_providers">
+                {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+            </ul>
+
+            <div class="login-or">{% trans 'or' %}</div>
+
+        </div>
+
+        {% include "socialaccount/snippets/login_extra.html" %}
+    {% endif %}
+
+    <form class="login" method="POST" action="{% url 'account_login' %}">
+        <h3>Iniciar Sesión</h3>
+        {% url 'account_signup' as register_url %}
+        {% url 'signup_step2' as register_url_2 %}
+<!--         <p>{% blocktrans %}Si aún no ha creado una cuenta,
+            <a href="{{ register_url }}?next={{ register_url_2 }}">registrese</a> primero.{% endblocktrans %}
+        </p> -->
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+
+        <button class="btn btn-secondary btn-cons m-t-10" type="submit">{% trans "Ingresar" %}</button>
+
+        <p style="margin-top: 30px;">
+            <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "¿Olvidaste tu contraseña?" %}</a>
+        </p>
+    </form>
+    <style>
+    .checkbox{
+        display: none !important;
+    }
+    </style>
+{% endblock %}

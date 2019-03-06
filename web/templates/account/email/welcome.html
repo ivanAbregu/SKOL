@@ -1,0 +1,14 @@
+{% extends 'base_email.html' %}
+{% load i18n %}
+{% block content %}
+    {% autoescape off %}
+        {% blocktrans with site_name=current_site.name site_domain=current_site.domain %}
+            <h4>Bienvenido a {{ site_name }}!</h4>
+            <p>Te acabas de registrar en {{ site_domain }}, en el caso que no hallas sido, ignora este email.</p>
+        {% endblocktrans %}
+    {% endautoescape %}
+    {% blocktrans with site_name=current_site.name site_domain=current_site.domain %}
+        <p>El equipo de {{ site_name }}!</p>
+        {{ site_domain }}
+    {% endblocktrans %}
+{% endblock %}

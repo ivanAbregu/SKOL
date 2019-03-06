@@ -1,0 +1,499 @@
+//Theme Overwrite
+
+.page-sidebar .sidebar-header{
+	background-color: $color-primary;
+}
+
+.social-wrapper .social .feed > .day > .item{
+	border: 0;
+}
+
+.toggle-sidebar, .toggle-sidebar:hover{
+	color:$color-black !important;
+	display: inline-block;
+}
+
+.btn-back{
+	color: $color-secondary;
+}
+
+// Login
+// --------------------------------------------------
+.ant-table-tbody>tr>td, .ant-table-thead>tr>th {
+    padding: 16px;
+    word-break: normal !important;
+}
+
+// Login
+// --------------------------------------------------
+.register-container{
+	background-color: $color-white;
+	padding: 2rem;
+	border: 1px solid #d5dee6;
+	border-radius: 4px;
+}
+
+// FORMS
+// --------------------------------------------------
+form h3, .account h3, .auth_h3{
+	margin: 0px 0px 20px 0px;
+	font-weight: 700;
+	font-size: 24px;
+	text-align: left;
+	color: $color-primary;
+}
+
+form p{
+	margin-bottom:20px;
+}
+
+input.form-control, .has-error .form-control{
+	box-shadow: rgba(67, 90, 111, 0.204) 0px 0px 0px 1px inset, rgba(67, 90, 111, 0.145) 0px 1px 2px inset;
+	border: medium none;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+input.form-control:focus, .has-error .form-control:focus{
+	z-index: 2;
+	outline: medium none currentcolor;
+	box-shadow: rgba(67, 90, 111, 0.255) 0px 0px 2px inset, rgba(1, 108, 209, 0.604) 0px 0px 0px 1px inset, rgba(1, 108, 209, 0.114) 0px 0px 0px 3px;
+}
+
+.has-error .help-block{
+	line-height: 1.2;
+	margin-top: 10px;
+}
+
+.ant-form-item, .ant-input-number{
+	display:block !important;
+	width: 100% !important;
+}
+
+.ant-advanced-search-form .ant-form-item {
+    margin-bottom: 20px !important;
+}
+
+.ant-input-number{
+	margin-top: 4px !important;
+}
+
+.ant-form-item-control-wrapper{
+	height: 35px;
+}
+
+
+// Logo SVG
+// --------------------------------------------------
+.logo-pm svg{
+	width:120px;
+}
+.logo-pm svg.dark{
+	fill: $color-general;
+}
+.logo-pm svg.white{
+	fill: $color-white;
+}
+
+
+// Body
+// --------------------------------------------------
+body{
+	color: $color-general;
+}
+
+
+// Header
+// --------------------------------------------------
+.header{
+    box-shadow: 0 4px 30px rgba(0,0,0,.05);
+    transition-duration: .5s;
+    border-bottom: 1px solid $border-color-light;
+}
+
+.ant-form-item-control-wrapper {
+    height: auto !important;
+}
+
+
+// Header Subnav
+// --------------------------------------------------
+.sub-nav{
+	li.dropdown{
+		a{
+			.arrow{
+				padding-left: 8px !important;
+			}
+			&:focus, &:active{
+				border-bottom: none !important;
+			}
+			&.active > li.dropdown{
+				.agu &{
+					color: $color-secondary !important;
+                    border-bottom: 3px solid;
+                    text-decoration: none;
+				}
+			}
+		}
+	}
+	ul.dropdown-open{
+		padding: 60px 14px 18px 14px !important;
+		a{
+			line-height: 2.2em !important;
+			&:focus, &:active, &.active{
+				border-bottom: none !important;
+			}
+		}
+	}
+}
+
+
+// Ant Communications List
+// --------------------------------------------------
+.ant-list-vertical .ant-list-item{
+	background-color: $color-white;
+	padding: 0px 20px;
+}
+
+.ant-list-item-action li{
+	width: 100%;
+	text-align: left;
+}
+
+.ant-spin-container{
+	box-shadow: rgba(67, 90, 111, 0.416) 0px 0px 1px, rgba(67, 90, 111, 0.3) 0px 2px 4px -2px;	
+}
+
+
+.ant-list-item, .ant-spin-container{
+	&:first-child{
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
+	}
+	&:last-child{
+		border-bottom-left-radius: 6px;
+		border-bottom-right-radius: 6px;
+	}
+}
+
+.ant-list-item:hover{
+	background-color: #f7f7f7;
+	cursor:pointer;
+}
+
+.author {
+	font-size: 13px;
+	& > .avatar, .author_name, .creation_date{
+		display: inline-block;
+		float: left;
+	}
+	& > .avatar{
+		width: 30px;
+	}
+	& > .creation_date{
+		top: 13px;
+		position: relative;
+		margin-left:10px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: clip;
+		width: 68px;
+	}
+	& > .author_name{
+		left: -68px;
+		top: -5px;
+		position: relative;
+		font-weight: 600;
+		color: #313131;
+	}
+}
+
+.ant-list-item-meta{
+	margin-bottom: 11px !important;
+}
+
+.ant-list-item-meta-avatar{
+	font-size:13px;
+	display: block !important;
+}
+
+.ant-list-item-meta-title{
+	margin-bottom: 0px !important;
+	color: #292929 !important;
+	text-transform: capitalize;
+	.tags{
+		height: 25px;
+		display: block;
+	}
+	.status{
+		display: inline-block;
+		float: left;
+		margin-right: 30px;
+		font-size: 11px;
+		text-transform: uppercase;
+	}
+	.type{
+		display: inline-block;
+		float: left;
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: 600;
+		height: 18px;
+		img{
+			max-width: 20px;
+			margin-right: 5px;
+			bottom: 4px;
+			position: relative;
+		}
+		span{
+			bottom: 3px;
+			position: relative;
+			color: #858585;
+		}
+	}
+}
+
+
+// Ant Search
+// --------------------------------------------------
+.ant-btn-primary {
+    background-color: $color-primary !important;
+    border-color: $color-primary !important;
+}
+
+
+// Ant Card
+// --------------------------------------------------
+.ant-card-body{
+	padding: 10px !important;
+	height: 85px;
+	font-size: 14px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.ant-card{
+	border-radius: 6px !important;
+	box-shadow: rgba(67, 90, 111, 0.416) 0px 0px 1px, rgba(67, 90, 111, 0.3) 0px 2px 4px -2px !important;
+}
+
+.ant-card-head{
+	border-top-left-radius: 6px !important;
+	border-top-right-radius: 6px !important;
+	padding: 0px !important;
+	min-height: 42px !important;
+}
+
+.card-layout .ant-spin-container{
+	box-shadow: none !important;	
+}
+
+.card-layout .ant-list-item:hover{
+	background-color: transparent !important;
+}
+
+.card-date{
+	background-color: $color-secondary;
+	padding: 5px 10px;
+	color: #fff;
+	font-weight: 600;
+	position: absolute;
+	border-top-right-radius: 20px;
+	line-height: 1.2em;
+	font-size: 13px;
+	text-transform: uppercase;
+	bottom: 85px;
+	width: 95px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: clip;
+}
+
+.ant-card:hover{
+	& > .ant-card-body{
+		background-color: #f7f7f7;
+
+	}
+	
+}
+
+.ant-card-head-title{
+	padding: 0px !important;
+}
+
+.card-image{ 
+	text-align: center;
+	height: 130px;
+	img{
+		height: auto;
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
+		object-fit: cover;
+		width: 100%;
+		max-height: 130px;
+		object-position: 0 0;
+	}
+}
+
+
+// Ant Card NO Card
+// --------------------------------------------------
+.card-no-card{
+	width: 264px;
+	box-shadow: rgba(67, 90, 111, 0.416) 0px 0px 1px, rgba(67, 90, 111, 0.3) 0px 2px 4px -2px !important;
+	border-radius: 6x;
+	max-height: 296px;
+	position: relative;
+	.card-date{
+		z-index: 3;
+		width: 95px;
+		height: 42px;
+		top:88px;
+		text-align: left;
+		position: absolute;
+		bottom: auto;
+	}
+	.card-body{
+		display: block;
+		position: relative;
+		background-color: $color-white;
+		font-size: 14px;
+		border-bottom-left-radius: 6px;
+		border-bottom-right-radius: 6px;
+		padding: 10px !important;
+		.title{
+			min-height: 25px;
+			max-height: 85px;
+			word-break: break-all;
+			text-transform: capitalize;
+		}
+		.ant-divider-horizontal{
+			margin: 10px 0px 0px 0px !important;
+		}
+		.author{
+			display: inline-block;
+			width: 100%;
+			margin-top: 7px;
+			height: 35px;
+			.start_date{
+				padding-left: 10px;
+				width: 78px;
+				top: 17px;
+				position: relative;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: clip;
+			}
+			.author_name{
+				left: 0px;
+				top: -33px;
+				padding-left: 40px;
+				width: 100%;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+	&.no-image{
+		max-height: 166px;
+		.card-body{
+			bottom: 0px;
+			border-top-left-radius: 6px;
+			border-top-right-radius: 6px;
+		}
+	}
+}
+
+
+// Ant tabs
+// --------------------------------------------------
+.ant-tabs-bar{
+	margin: 0px !important;
+	border-color: transparent !important;
+}
+.ant-tabs-content{
+	min-height: 320px;
+	padding: 18px;
+	text-transform: initial;
+	background-color: $color-white;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	p{
+		font-size: 14px;
+		line-height: 24px;	
+	}
+	.ant-spin-container{
+		box-shadow: none;
+	}
+	.ant-table-content{
+		thead{
+			display: none;
+		}
+		.ant-table-tbody > tr:hover > td{
+			background-color: #f7f7f7 !important;
+		}
+	}
+	.ant-table-small{
+		border:none;
+		table{
+			padding: 0px;
+		}
+	}
+}
+.ant-tabs-tab-active{
+	color: $color-secondary !important;
+	border-color: transparent !important;
+	padding-bottom: 2px !important;
+}
+
+
+// Simple data tables
+// --------------------------------------------------
+.data-table{
+	tbody{
+		td{
+			background-color: $color-white;
+		}
+		tr:last-child{
+				border-bottom-left-radius: 6px;
+				border-bottom-right-radius: 6px;
+			}
+		
+	}
+	.ant-table-thead > tr > th{
+		background-color: #e8e8e8 !important;
+	}
+	.ant-table-thead > tr:first-child > th:first-child{
+		border-top-left-radius: 6px !important;
+	}
+	.ant-table-thead > tr:first-child > th:last-child{
+		border-top-right-radius: 6px !important;
+	}
+	.ant-table-tbody > tr:last-child > td:first-child{
+		border-bottom-left-radius: 6px !important;
+	}
+	.ant-table-tbody > tr:last-child > td:last-child{
+		border-bottom-right-radius: 6px !important;
+	}
+	.ant-table-tbody > tr:hover > td{
+		background-color: #f7f7f7 !important;
+	}
+	tr.ant-table-expanded-row{
+		background: transparent !important;
+	}
+}
+
+
+// Dropdown 
+// --------------------------------------------------
+.dropdown-forms{
+	button{
+		width: 122px;
+	}
+	.dropdown-menu{
+		right: 0;
+		left: auto !important;
+	}	
+}

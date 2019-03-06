@@ -1,0 +1,18 @@
+{% extends "base_clean.html" %}
+
+{% load i18n bootstrap3 %}
+
+{% block head_title %}{% trans "Profile" %}{% endblock %}
+
+{% block content %}
+    <h3>Te queda 1 paso para poder usar Clingot</h3>
+
+    <p>Completa los datos del centro medico</p>
+
+    <form class="signup2" id="signup_2_form" method="post" action="{% url 'signup_step2' %}">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button class="btn btn-primary btn-cons m-t-10" type="submit">{% trans "Guardar" %}</button>
+    </form>
+
+{% endblock %}

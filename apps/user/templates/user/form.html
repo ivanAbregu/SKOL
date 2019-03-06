@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load bootstrap3 i18n %}
+
+{% block head_title %}Editando perfil - {{ super }}{% endblock %}
+
+{% block breadcrumb %}
+    {{ block.super }}
+    <li class="breadcrumb-item active">Profile</li>
+{% endblock %}
+
+{% block content %}
+    <div class="col-md-4 col-md-offset-4">
+        <h3>Editar Perfil</h3>
+        <form method="POST" action="" >
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <button class="btn btn-primary btn-cons m-t-10" type="submit">Actualizar</button>
+        </form>
+    </div>
+{% endblock %}
