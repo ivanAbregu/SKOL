@@ -1,0 +1,72 @@
+[
+{
+    "model": "task.task",
+    "pk": 5,
+    "fields": {
+        "created_at": "2019-03-09T03:28:00.272Z",
+        "updated_at": "2019-03-09T03:28:12.544Z",
+        "_deleted": false,
+        "owner": 1,
+        "name": "Compras",
+        "description": "Hacer las compras al super.",
+        "done": false,
+        "end_date": "2019-03-10T06:27:48Z"
+    }
+},
+{
+    "model": "task.task",
+    "pk": 6,
+    "fields": {
+        "created_at": "2019-03-09T03:28:49.725Z",
+        "updated_at": "2019-03-09T03:28:49.725Z",
+        "_deleted": false,
+        "owner": 1,
+        "name": "Auto",
+        "description": "Realizar el service al auto.",
+        "done": false,
+        "end_date": "2019-03-11T03:28:31.252Z"
+    }
+},
+{
+    "model": "task.task",
+    "pk": 7,
+    "fields": {
+        "created_at": "2019-03-09T03:31:15.457Z",
+        "updated_at": "2019-03-09T03:33:57.953Z",
+        "_deleted": false,
+        "owner": 1,
+        "name": "Trabajo",
+        "description": "Comenzar a ser parte del equipo de trabajo de Deep Vision",
+        "done": false,
+        "end_date": "2019-03-11T03:33:52.183Z"
+    }
+},
+{
+    "model": "task.task",
+    "pk": 8,
+    "fields": {
+        "created_at": "2019-03-09T03:31:59.530Z",
+        "updated_at": "2019-03-09T03:31:59.530Z",
+        "_deleted": false,
+        "owner": 1,
+        "name": "Tech",
+        "description": "Estudiar deep learning",
+        "done": false,
+        "end_date": "2019-04-01T03:31:44.443Z"
+    }
+},
+{
+    "model": "task.task",
+    "pk": 9,
+    "fields": {
+        "created_at": "2019-03-09T03:33:42.377Z",
+        "updated_at": "2019-03-09T03:33:42.377Z",
+        "_deleted": false,
+        "owner": 1,
+        "name": "Deploy",
+        "description": "Hacer el deploy del proyecto. Posiblemente en Heroku",
+        "done": false,
+        "end_date": "2019-03-10T03:33:31.053Z"
+    }
+}
+]
