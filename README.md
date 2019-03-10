@@ -9,6 +9,7 @@ Para este proyecto se utilizaran las soguientes tecnologias:
   * Ant Design.
 
 Instalacion:
+
 Requisitos: Docker.
 Una vez descargado el proyecto, abrir una consola.
 Posicionar dentro del proyecto.

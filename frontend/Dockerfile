@@ -1,5 +1,5 @@
 FROM node:9
-MAINTAINER Made2
+MAINTAINER Ivan Abregu
 
 RUN mkdir -p /usr/src/app
 

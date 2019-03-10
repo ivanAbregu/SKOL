@@ -265,7 +265,6 @@ WEBPACK_LOADER = {
 
 if env("ENVIRONMENT", "local") != 'local':
     COMPRESS_OFFLINE = True
-
 MEDIA_URL='/media/'
 
 MEDIA_ROOT = BASE_DIR + '/media/'
@@ -485,6 +484,6 @@ LOGGING = {
 
 if env("ENVIRONMENT", "local") != 'local':
     ADMINS = [
-        ('Matias (Dev)', 'matiroson@gmail.com'),
+        ('Ivan (Dev)', 'ivan.abregu@gmail.com'),
     ]
     MANAGERS = ADMINS

@@ -20,19 +20,15 @@ echo "from django.contrib.auth import get_user_model
 User = get_user_model()
 if not User.objects.filter(is_superuser=True).exists():
     user = User()
-    user.first_name = 'Admin'
-    user.last_name = 'Dev'
+    user.first_name = 'ivan'
+    user.last_name = 'Abregu'
     user.is_superuser = True
     user.is_staff = True
     user.set_password('qwerty123')
-    user.email = 'adminDjango@made2.co'
+    user.email = 'admin@gmail.com'
     user.save()
-
-from django.contrib.auth.models import Group
-if not Group.objects.filter(name='adminClub').exists():
-	Group.objects.create(name='adminClub')
 
 " | python3 manage.py shell || exit 1
 
-
+python3 manage.py runserver
 gunicorn web.wsgi:application --bind 0.0.0.0:8000 --log-level=info --timeout=500

@@ -28,4 +28,4 @@ RUN chmod +x /usr/src/app/init.sh
 RUN chmod 777 /usr/src/app/init_local.sh
 RUN chmod +x /usr/src/app/init_local.sh
 
-CMD ['/usr/src/app/init.sh']
+CMD ["/usr/src/app/init.sh"]
