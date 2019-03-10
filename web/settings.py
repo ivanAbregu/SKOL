@@ -265,6 +265,8 @@ WEBPACK_LOADER = {
 
 if env("ENVIRONMENT", "local") != 'local':
     COMPRESS_OFFLINE = True
+    COMPRESS_ENABLED = True
+    
 MEDIA_URL='/media/'
 
 MEDIA_ROOT = BASE_DIR + '/media/'
