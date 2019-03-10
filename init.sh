@@ -30,5 +30,4 @@ if not User.objects.filter(is_superuser=True).exists():
 
 " | python3 manage.py shell || exit 1
 
-python3 manage.py runserver
 gunicorn web.wsgi:application --bind 0.0.0.0:8000 --log-level=info --timeout=500
