@@ -5,7 +5,7 @@
 
 .login-wrapper{
 	height: 100%;
-	background-color: $color-primary;
+	background-color: black;
 	& > * {
 		height: 100%;
 	}
@@ -13,9 +13,9 @@
 		position: absolute;
 		width: 100%;
 		overflow: hidden;
-		background-image: url("/static/assets/img/ilustracion.png");
+		background-image: url("/static/assets/img/ilustracion.jpg");
 		background-repeat:no-repeat;
-		background-size: 90%;
+		background-size: 100%;
 		margin-left: -240px;
 		& > img{
 			height: 60%;
