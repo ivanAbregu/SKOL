@@ -32,9 +32,9 @@
         <h3>Iniciar Sesión</h3>
         {% url 'account_signup' as register_url %}
         {% url 'signup_step2' as register_url_2 %}
-<!--         <p>{% blocktrans %}Si aún no ha creado una cuenta,
+         <p>{% blocktrans %}Si aún no ha creado una cuenta,
             <a href="{{ register_url }}?next={{ register_url_2 }}">registrese</a> primero.{% endblocktrans %}
-        </p> -->
+        </p> 
         {% csrf_token %}
         {% bootstrap_form form %}
         {% if redirect_field_value %}

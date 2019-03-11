@@ -136,7 +136,7 @@ DATABASES = {
 #############################################
 
 FIXTURE_DIRS = (
-   "%s%s" % (BASE_DIR, '/apps/demo/fixtures/'),
+   "%s%s" % (BASE_DIR, '/fixtures/'),
 )
 
 
@@ -266,7 +266,7 @@ WEBPACK_LOADER = {
 if env("ENVIRONMENT", "local") != 'local':
     COMPRESS_OFFLINE = True
     COMPRESS_ENABLED = True
-    
+
 MEDIA_URL='/media/'
 
 MEDIA_ROOT = BASE_DIR + '/media/'
