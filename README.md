@@ -1,5 +1,5 @@
 Integracion de Django y React.js.
-Para este proyecto se utilizaran las soguientes tecnologias:
+Para este proyecto se utilizaran las siguientes tecnologias:
   * Docker.
   * Django.
   * Django Rest Framework.
